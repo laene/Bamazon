@@ -11,5 +11,8 @@ For this app, I used primarily MySQL, Node.JS, and Inquirer.
 
 ## How To Use
 
-![Step One](12_homework/screenshots/step1.png)
-Format: ![Alt Text](url)
+First you need to navigate to the correct folder in the terminal, and then type node bamazonCustomer.js
+
+![Start](/screenshots/step1.png)
+
+
