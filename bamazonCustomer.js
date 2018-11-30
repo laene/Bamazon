@@ -1,12 +1,17 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 
+//Could use to make table prettier, but haven't done so yet.
+var table = require("console.table");
+var colors = require("colors");
+
 //Global Variables 
 var productsTable;
 var userPurchase;
 var userAmount;
-var userCart = {};
 var userCost = 0;
+//Could use to track customer's purchases, but haven't done so yet.
+var userCart = {};
 
 //Connection Info
 var connection = mysql.createConnection({
@@ -33,7 +38,12 @@ function listProducts() {
   connection.query("SELECT * FROM products", function (err, res) {
     if (err) throw err;
     console.log("\nAll Products\n");
-    console.table(res);
+    var products = [];
+    for (var i = 0; i < res.length; i++) {
+      products.push([res[i].item_id, res[i].product_name, res[i].department_name, res[i].price, res[i].stock_quantity]);
+    }
+    var headings = ["Item ID", "Product", "Department", "Price $", "In Stock"];
+    console.table(headings, products);
     productsTable = res;
     askQuestion();
   });
