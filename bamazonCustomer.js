@@ -104,6 +104,7 @@ function askQuestion() {
         userCart = {};
         console.log("Have a nice day!");
         console.log("Your cart has been emptied.");
+        //add in code to replace inventory for items in cart but not actually purchased.
         connection.end();
       }
 
