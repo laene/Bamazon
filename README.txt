@@ -11,5 +11,5 @@ For this app, I used primarily MySQL, Node.JS, and Inquirer.
 
 ## How To Use
 
-![Step1](/screenshots/step1.png)
+![Step1](/12_homework/screenshots/step1.png)
 Format: ![Alt Text](url)
